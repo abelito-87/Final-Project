@@ -19,3 +19,93 @@
 /* Home view */
 
 /* Account View */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Quicksand:wght@300;400;500&family=Roboto:wght@300;500;700&display=swap');
+
+*{
+    font-family: Lato, Quiksand, Roboto;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    margin-left: 10%; 
+    font-size: 2rem;   
+}
+
+.header-subtitle p {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-sign-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    border: 5px solid #31a037;
+    background-color: #31a037;
+    margin: 0 10%;  
+    border-radius: 30px; 
+}
+
+#email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+}
+
+#password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#confirmPassword {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.input-field {
+    padding: 5px 150px;
+    border-radius: 10px;    
+}
+
+.input-field-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(77, 77, 199);
+    color: #fafafa;
+    padding: 10px 20px;
+    border-color: #31a037;
+    margin-left: 190px;
+    border-radius: 10px;
+}

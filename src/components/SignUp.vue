@@ -7,7 +7,7 @@
         <p class="header-subtitle">Start organizing your tasks!</p>
       </div>
     </div>
-
+      <img src="" alt="">
     <form @submit.prevent="signUp" class="form-sign-in">
       <div class="form">
         <div class="form-input">
@@ -70,6 +70,10 @@ import { storeToRefs } from "pinia";
 // Route Variables
 const route = "/auth/login";
 const buttonText = "Sign In";
+
+//COMENÇO A ESCRIURE--------------------------------------------
+const botonText = "/src/views/Home.vue"
+//AQUI ACABO--------------------------------------------->
 
 // Input Fields
 const email = ref("");
