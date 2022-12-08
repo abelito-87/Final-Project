@@ -33,8 +33,8 @@
             required
           />
         </div>
-        <button class="button" type="submit">Sign In</button>
-        <p>
+        <button class="button" type="submit">Log In</button>
+        <p class="account">
           Dont have an account?
           <PersonalRouter
             :route="route"
@@ -54,29 +54,37 @@
 
 <script setup>
 import PersonalRouter from "./PersonalRouter.vue";
-
+import { ref, computed } from "vue";
+import { supabase } from "../supabase";
+import { useRouter } from "vue-router";
+import { useUserStore } from "../stores/user";
+import { storeToRefs } from "pinia";
 
 
 // Route Variables
 const route = "/auth/signup";
 const buttonText = "Sign Up";
+//const errorMsg = ref("Ha habido un error");
+const errorMsg = ref("")
+
+const redirect = useRouter();
 
 // Arrow function to Signin user to supaBase
 
 // AQUI ESCRIC JO
 const signIn = async () => {
-  if (password.value === confirmPassword.value) {
     try {
-      await useUserStore().signUp(email.value, password.value);
+      await useUserStore().signIn(email.value, password.value);
       redirect.push({ path: "/" });
     } catch (error) {  
       errorMsg.value = error.message;
       setTimeout(() => {
         errorMsg.value = null;
       }, 5000);
+      
     }
     return;
-  }
+  
   errorMsg.value = "error";
 };
 // AQUI ACABO 

@@ -47,13 +47,29 @@ const getUser = useUserStore().user;
 const userEmail = getUser.email;
 
 // async function that calls the signOut method from the useUserStore and pushes the user back to the Auth view.
+
+//DECLARAR VARIABLES
+
 const redirect = useRouter();
+const errorMsg = ref("error");
+
+//CREAR FUNCIO ASYNC DEL SIGNOUT PER TORNAR A LA PAGINA INICI
 
 const signOut = async () => {
-  try{
+  try {
+    await useUserStore().signOut();
+    console.log("meme");
+    redirect.push({path:"/auth/login"});
     // call the user store and send the users info to backend to signOut
     // then redirect user to the homeView
-  } catch (error) {}
+  } catch (error) { 
+    errorMsg.value = error.message;
+      setTimeout(() => {
+        errorMsg.value = null;
+      }, 5000);
+  }
+  return;
+  errorMsg.value = "error";
 };
 
 </script>
@@ -64,7 +80,7 @@ const signOut = async () => {
 }
 
 nav {
-  background-color: lightgray;
+  background-color: #EBECEE;
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -77,5 +93,22 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
 }
+
+.log-out-welcome {
+  margin-left: 150px;
+  font-weight: bold;
+}
+
+.router-link-active{ 
+  text-decoration: none;
+  font-weight: bold;
+  color: #E94D4D;
+}
+
+.router-link-active ul li{ 
+  text-decoration: none;
+}
+
 </style>

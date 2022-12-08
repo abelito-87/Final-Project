@@ -6,9 +6,9 @@
       <h3>Your account:</h3>
       <router-link to="/account">Account</router-link>
     </div>
-    <NewTask />
+    <NewTask  />
     <h1>Tasks:</h1>
-    <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+    <TaskItem @my-event="getTasks" v-for="task in tasks" :key="task.id" :task="task" />
   </div>
 </template>
 

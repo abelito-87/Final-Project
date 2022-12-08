@@ -44,13 +44,11 @@ export const useUserStore = defineStore("user", {
       const { user, error } = await supabase.auth.signIn({
         email: email,
         password: password,
-      },
-      {
-        shouldCreateUser: false,
       });
       if (error) throw error;
       if (user) {
         this.user = user;
+        console.log(this.user);
        /* const { data: profile } = await supabase
         .from('profiles')
         .select()

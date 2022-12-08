@@ -18,6 +18,9 @@
 import { ref } from "vue";
 import { useTaskStore } from "../stores/task"   
 
+
+
+
 const taskStore = useTaskStore();
 
 // variables para los valors de los inputs
@@ -32,7 +35,7 @@ const errorMessage = ref(null);
 
 // Arrow function para crear tareas.
 const addTask = () => {
-if(name.value.length === 0 || description.value.length === 0){
+if(name.value.length <= 3  || description.value.length === 0){
     // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
 
     showErrorMessage.value = true;
@@ -47,6 +50,8 @@ if(name.value.length === 0 || description.value.length === 0){
     taskStore.addTask(name.value, description.value);
     name.value = '';
     description.value = '';
+
+    
 }
 };
 

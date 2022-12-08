@@ -26,6 +26,7 @@ export const useTaskStore = defineStore("tasks", {
           description: description,
         },
       ]);
+      this.$emit('my-event')
     },
 
     async deleteTask(id){
