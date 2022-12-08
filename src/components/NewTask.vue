@@ -1,16 +1,16 @@
 <template>
-    <h1>Add a new Task</h1>
+    <h1 class="add">Add a new Task</h1>
     <div v-if="showErrorMessage">
         <p class="error-text">{{ errorMessage }}</p>
     </div>
     <div>
-        <div class="input-field">
+        <div class="input-field-task">
             <input type="text" placeholder="Add a Task Title - Listen to Kendrick Lamar" v-model="name">
         </div>
-        <div class="input-field">
+        <div class="input-field-task-descript">
             <input type="text" placeholder="Add a Task Description - Look up Kendrick Lamar's FEAR album on spotify and listen to the whole album." v-model="description">
         </div>
-        <button @click="addTask" class="button">Add</button>
+        <button @click="addTask" class="button-add">Add</button>
     </div>
 </template>
 
@@ -57,5 +57,40 @@ if(name.value.length <= 3  || description.value.length === 0){
 
 </script>
 
-<style></style>
+<style>
+
+.add {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 30px 0;
+}
+
+.input-field-task {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25%;
+    margin-bottom: 20px;
+    
+}
+
+.input-field-task-descript {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25%;
+    margin-bottom: 20px;
+}
+
+.button-add {
+    color: #fafafa;
+    margin:  20px 20px 20px 0;;
+    padding: 5px 20px;
+    border: 0px solid;
+    border-radius: 10px;
+    background-color: #E94D4D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+</style>
   

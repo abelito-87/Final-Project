@@ -26,6 +26,7 @@ export const useTaskStore = defineStore("tasks", {
           description: description,
         },
       ]);
+      // EMIT VA AIXI?
       this.$emit('my-event')
     },
 

@@ -23,7 +23,14 @@ const deleteTask = async() => {
 
 </script>
 
-<style></style>
+<style>
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+</style>
 
 <!--
 **Hints**

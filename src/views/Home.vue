@@ -8,7 +8,7 @@
     </div>
     <NewTask  />
     <h1>Tasks:</h1>
-    <TaskItem @my-event="getTasks" v-for="task in tasks" :key="task.id" :task="task" />
+    <TaskItem class="tasks" @my-event="getTasks" v-for="task in tasks" :key="task.id" :task="task" />
   </div>
 </template>
 
@@ -34,7 +34,23 @@ getTasks();
 
 </script>
 
-<style></style>
+<style>
+
+.content h3 {
+  font-size: 2rem;
+}
+
+.content {
+  text-align: center;
+  font-weight: bold;
+}
+
+.container {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+}
+</style>
 
 <!-- 
 **Hints**

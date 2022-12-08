@@ -1,54 +1,46 @@
 <!-- COMPONENTE BOILERPLATE -->
  
-  <template>
+<template>
 
-  <div class="container">
-    <h3 class="header-title">Log In to ToDo App</h3>
-    <p class="header-subtitle">Estamos en la ruta de login. Aquí deberíais crear un form con la lógica correspondiente para que este permita al usuario loguearse con su email y su contraseña. Miraros la lógica de SignUp si necesitáis inspiración :)</p>
-    <!--<p>Dont have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p> -->
-  </div>
-  <!--COMENÇO A ESCRIURE------------------------------------->
- 
-  <form @submit.prevent="signIn" class="form-sign-in">
-      <div class="form">
-        <div class="form-input">
-          <label class="input-field-label">E-mail</label>
-          <input
-            type="email"
-            class="input-field"
-            placeholder="example@gmail.com"
-            id="email"
-            v-model="email"
-            required
-          />
+  <body>
+
+
+    <div class="container">
+      <h3 class="header-title">Log In to ToDo App</h3>
+      <!--<p class="header-subtitle">Estamos en la ruta de login. Aquí deberíais crear un form con la lógica correspondiente
+        para que este permita al usuario loguearse con su email y su contraseña. Miraros la lógica de SignUp si
+        necesitáis inspiración :)</p>
+      <p>Dont have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p> -->
+    </div>
+    <!--COMENÇO A ESCRIURE------------------------------------->
+    <div class="flex-Container">
+      <form @submit.prevent="signIn" class="form-sign-in">
+        <div class="form">
+          <div class="form-input">
+            <label class="input-field-label">E-mail</label>
+            <input type="email" class="input-field" placeholder="example@gmail.com" id="email" v-model="email"
+              required />
+          </div>
+          <div class="form-input">
+            <label class="input-field-label">Password</label>
+            <input type="password" class="input-field" placeholder="**********" id="password" v-model="password"
+              required />
+          </div>
+          <button class="button-login" type="submit">Log In</button>
+          <p class="account">
+            Dont have an account?
+            <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link" />
+          </p>
         </div>
-        <div class="form-input">
-          <label class="input-field-label">Password</label>
-          <input
-            type="password"
-            class="input-field"
-            placeholder="**********"
-            id="password"
-            v-model="password"
-            required
-          />
-        </div>
-        <button class="button" type="submit">Log In</button>
-        <p class="account">
-          Dont have an account?
-          <PersonalRouter
-            :route="route"
-            :buttonText="buttonText"
-            class="sign-up-link"
-          />
-        </p>
-      </div>
-    </form>
+      </form>
+      <img src="https://res.cloudinary.com/dn73thusg/image/upload/v1670485657/Final-Project/mesa_trabajo_ohzrvn.jpg"
+        id="mesa-trabajo" alt="">
+    </div>
 
-    <div v-show="errorMsg">{{errorMsg}}</div>
-   
-   <!--AQUI ACABO--------------------------------------------->
+    <div v-show="errorMsg">{{ errorMsg }}</div>
 
+    <!--AQUI ACABO--------------------------------------------->
+  </body>
 </template>
 
 
@@ -73,21 +65,23 @@ const redirect = useRouter();
 
 // AQUI ESCRIC JO
 const signIn = async () => {
-    try {
-      await useUserStore().signIn(email.value, password.value);
-      redirect.push({ path: "/" });
-    } catch (error) {  
-      errorMsg.value = error.message;
-      setTimeout(() => {
-        errorMsg.value = null;
-      }, 5000);
-      
-    }
-    return;
-  
+  try {
+    await useUserStore().signIn(email.value, password.value);
+    redirect.push({ path: "/" });
+  } catch (error) {
+    errorMsg.value = error.message;
+    setTimeout(() => {
+      errorMsg.value = null;
+    }, 5000);
+
+  }
+  return;
+
   errorMsg.value = "error";
 };
-// AQUI ACABO 
+// AQUI ACABO
 </script>
 
-<style></style>
+<style>
+
+</style>

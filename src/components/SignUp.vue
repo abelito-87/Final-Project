@@ -43,7 +43,7 @@
             required
           />
         </div>
-        <button class="button" type="submit">Sign Up</button>
+        <button class="button-signup" type="submit">Sign Up</button>
         <p class="account">
           Have an account?
           <PersonalRouter

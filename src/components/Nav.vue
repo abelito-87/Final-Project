@@ -1,27 +1,27 @@
 <template>
   <nav>
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-    <router-link to="/">
+    <router-link class="nav-home" to="/">
       Home
     </router-link>
 
     <ul>
         <li>
-          <router-link to="/">Task Manager</router-link>
+          <router-link class="nav-home" to="/">Task Manager</router-link>
         </li>
 
         <li>
-          <router-link to="/account">Your Account</router-link>
+          <router-link class="nav-home" to="/account">Your Account</router-link>
         </li>
     </ul>
 
     <div>
       <ul>
         <li class="log-out-welcome">
-          <p>Welcome, user</p>
+          <p class="welcome">Welcome, user</p>
         </li>
         <li>
-          <button @click="signOut" class="button">Log out</button>
+          <button @click="signOut" class="button-logout">Log out</button>
         </li>
       </ul>
     </div>
@@ -96,19 +96,24 @@ nav ul {
   text-decoration: none;
 }
 
-.log-out-welcome {
-  margin-left: 150px;
+.nav-home {
+  text-decoration: none;
   font-weight: bold;
 }
 
-.router-link-active{ 
-  text-decoration: none;
-  font-weight: bold;
-  color: #E94D4D;
+.button-logout {
+    color: #fafafa;
+    margin:  20px 20px 20px 0;;
+    padding: 5px 20px;
+    border: 0px solid;
+    border-radius: 10px;
+    background-color: #E94D4D;
 }
 
-.router-link-active ul li{ 
-  text-decoration: none;
+.welcome {
+  font-weight: bold;
 }
+
+
 
 </style>
