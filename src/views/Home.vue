@@ -7,7 +7,7 @@
       <router-link to="/account">Account</router-link>
     </div>
     <NewTask  />
-    <h1>Tasks:</h1>
+    <h1 class="title-task">Tasks:</h1>
     <div class="allTasks">
     <TaskItem class="tasks" @my-event="getTasks" v-for="task in tasks" :key="task.id" :task="task" />
   </div>

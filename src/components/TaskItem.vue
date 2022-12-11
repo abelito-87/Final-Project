@@ -2,7 +2,7 @@
 <div>
     <h3 class="task-title">{{task.title}}</h3>
     <h5 class="task-description">{{task.description}}</h5>
-    <input type="text" v-model="description">
+    <input class="input-description" type="text" v-model="description">
     <button class="buttons-change" @click="editTask">Edit</button>
     <button class="buttons-change" @click="doneTask">Done</button>
     <button class="button-delete" @click="deleteTask">Delete</button>

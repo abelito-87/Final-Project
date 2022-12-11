@@ -123,6 +123,50 @@ h3 {
     background-color: #E94D4D;
 }
 
+/* estils per les tasques*/
+
+
+.add {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 30px 0;
+    font-family: 'Rock Salt', cursive;
+}
+
+.input-field-task {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25%;
+    margin-bottom: 20px;
+    
+}
+
+.input-field-task-descript {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25%;
+    margin-bottom: 20px;
+}
+
+.button-add {
+    color: #fafafa;
+    margin:  20px 20px 20px 70%;;
+    padding: 5px 30px;
+    border: 0px solid;
+    border-radius: 10px;
+    background-color: #E94D4D;
+    font-size: 1.5rem;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;*/
+}
+
+.title-task {
+    font-size: 1.5rem;
+    margin-left: 25%;
+}
+
 .buttons-change {
     color: #fafafa;
     margin:  20px 20px 20px 0;;
@@ -132,7 +176,6 @@ h3 {
     background-color: #E94D4D;
 }
 
-/* estils per les tasques*/
 
 .button-delete {
     color: #E94D4D;
@@ -159,4 +202,8 @@ h3 {
  border-color: #1d1919;
  padding: 20px;
  margin: 40px 10px;
+}
+
+.input-description {
+    margin-right: 20px;
 }
