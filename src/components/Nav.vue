@@ -80,7 +80,7 @@ const signOut = async () => {
 }
 
 nav {
-  background-color: #EBECEE;
+  /*background-color: #EBECEE;*/
   display: flex;
   width: 100%;
   justify-content: space-around;

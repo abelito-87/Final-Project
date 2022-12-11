@@ -26,10 +26,37 @@ export const useTaskStore = defineStore("tasks", {
           description: description,
         },
       ]);
-      // EMIT VA AIXI?
-      this.$emit('my-event')
+    },
+// -------------------------------------------
+    async editTask(title, description, id) {
+      console.log(useUserStore().user.id);
+      const { data: tasks } = await supabase
+        .from("tasks")
+        .update([
+          {
+            title: title,
+            description: description,
+          },
+        ])
+        .match({
+          id: id,
+        });
     },
 
+    async doneTask(is_complete, id) {
+      console.log(useUserStore().user.id);
+      const { data: tasks } = await supabase
+        .from("tasks")
+        .update([
+          {
+            is_complete: !is_complete,
+          },
+        ])
+        .match({
+          id: id,
+        });
+    },
+//-------------------------------------------------
     async deleteTask(id){
       const { data, error } = await supabase.from("tasks").delete().match({
         id: id,
@@ -37,3 +64,4 @@ export const useTaskStore = defineStore("tasks", {
     }
   }
 });
+console.log("hola");

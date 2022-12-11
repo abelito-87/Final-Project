@@ -1,8 +1,8 @@
 <!-- COMPONENTE BOILERPLATE -->
  
 <template>
-
-  <body>
+  
+   <body>
 
 
     <div class="container">
@@ -34,7 +34,7 @@
         </div>
       </form>
       <img src="https://res.cloudinary.com/dn73thusg/image/upload/v1670485657/Final-Project/mesa_trabajo_ohzrvn.jpg"
-        id="mesa-trabajo" alt="">
+        id="mesa-trabajo" alt="Mesa de trabajo con ordenadore y cafe">
     </div>
 
     <div v-show="errorMsg">{{ errorMsg }}</div>

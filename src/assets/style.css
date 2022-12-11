@@ -22,12 +22,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Quicksand:wght@300;400;500&family=Roboto:wght@300;500;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Quicksand:wght@300;400;500&family=Roboto:wght@300;500;700&family=Rock+Salt&display=swap');
+
 *{
-    font-family: Lato, Quiksand, Roboto;
+    font-family:'Lato', sans-serif;
     font-size: 1rem;
     padding: 0;
     margin: 0; 
-    background-color: #EBECEE;
+    /*background-color: #EBECEE;*/
+   
 }
 
 /* SINGIN*/
@@ -36,6 +39,7 @@ body {
     margin: 10px 20px;
     padding: 10px 20px;
 }
+
 .flex-Container {
     display: flexbox;
     display: flex;
@@ -44,11 +48,13 @@ body {
 }
 
 h3 {
-    color: #fafafa;
-    background-color: #E94D4D;
-    padding: 40px 0;
-    border-radius: 10px; 
+    color: #000000;
+    /*background-color: #E94D4D;*/
+    padding: 10px 0;
+    font-family: 'Rock Salt', cursive;
 }
+
+
 
 #mesa-trabajo {
     width: 50%;
@@ -61,6 +67,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .form-sign-in {
@@ -104,6 +111,7 @@ h3 {
     align-items: center;
     font-weight: bold;
     font-size: 1.2rem;
+    font-family: 'Rock Salt', cursive;
 }
 
 .button-signup {
@@ -114,131 +122,41 @@ h3 {
     border-radius: 10px;
     background-color: #E94D4D;
 }
-/*
-.header-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 50px;
-    font-size: 2rem;
-    padding: 40px;
-    border: 2px solid #000000;
-    border-radius: 30px;
-    background-color: #fafafa;  
-}
 
-.header-subtitle {
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 150px;
-    text-align: center;   
-}
-
-p {
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 150px;
-    text-align: center;
-    margin-bottom: 40px;   
-}
-
-.form {
-    background-color: #fafafa;
-    border-radius: 30px 30px;
-}
-.input-field {
-    background-color: #fafafa;
-}
-.form-input {
-    background-color: #fafafa;
-}
-
-
-.form-sign-in {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    margin: 0 10%;  
-    border: 2px solid #000000;
-    background-color: #fafafa;   
-    border-radius: 30px;
-}
-
-#email {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    margin-left: 28%;
-    margin-bottom: 5%; 
-    background-color: #fafafa;  
-}
-
-#password {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    margin-left: 28%;
-    margin-bottom: 5%;
-    background-color: #fafafa;
-}
-
-#confirmPassword {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    margin-left: 28%;
-    margin-bottom: 5%;
-    background-color: #fafafa;
-}
-
-.input-field {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px 10px;
-    border-radius: 10px;
-    margin-left: 110px;    
-}
-
-.input-field-label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.2rem;
-    background-color: #fafafa;
-}
-
-.button{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.buttons-change {
     color: #fafafa;
-    padding: 10px 40px;
-    margin: 10px 0 10px 155px;
+    margin:  20px 20px 20px 0;;
+    padding: 5px 20px;
     border: 0px solid;
     border-radius: 10px;
-    background-color: #E94D4D;   
+    background-color: #E94D4D;
 }
 
-.sign-up-link{
-    
-    color: #000000;
-    border: 2px solid #000000;
+/* estils per les tasques*/
+
+.button-delete {
+    color: #E94D4D;
+    margin:  20px 20px 20px 0;;
+    padding: 5px 20px;
+    border: 0px solid;
     border-radius: 10px;
-    padding: 2px 8px;
-    text-decoration: none;
-    background-color: #fafafa;
+    background-color: #1d1919;
 }
 
-.account {
-    background-color: #fafafa;
-}
-   /* FINS AQUI, SIGNIN SIGNup*/   
 
+.allTasks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 40px;
+    flex-wrap: wrap;
+    
+}
+
+.tasks {
+ border: 1px solid;
+ border-radius: 10px;
+ border-color: #1d1919;
+ padding: 20px;
+ margin: 40px 10px;
+}

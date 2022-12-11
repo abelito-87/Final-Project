@@ -5,13 +5,14 @@
     </div>
     <div>
         <div class="input-field-task">
-            <input type="text" placeholder="Add a Task Title - Listen to Kendrick Lamar" v-model="name">
+            <input type="text" placeholder="Add a Task Title" v-model="name">
         </div>
         <div class="input-field-task-descript">
-            <input type="text" placeholder="Add a Task Description - Look up Kendrick Lamar's FEAR album on spotify and listen to the whole album." v-model="description">
+            <input type="text" placeholder="Add a Task Description" v-model="description">
         </div>
         <button @click="addTask" class="button-add">Add</button>
     </div>
+    
 </template>
 
 <script setup>
@@ -64,6 +65,7 @@ if(name.value.length <= 3  || description.value.length === 0){
     font-weight: bold;
     font-size: 1.5rem;
     margin: 30px 0;
+    font-family: 'Rock Salt', cursive;
 }
 
 .input-field-task {

@@ -1,7 +1,11 @@
 <template>
-<div class="container">
-    <h3>{{task.title}}</h3>
-    <button @click="deleteTask">Delete {{task.title}}</button>
+<div>
+    <h3 class="task-title">{{task.title}}</h3>
+    <h5 class="task-description">{{task.description}}</h5>
+    <input type="text" v-model="description">
+    <button class="buttons-change" @click="editTask">Edit</button>
+    <button class="buttons-change" @click="doneTask">Done</button>
+    <button class="button-delete" @click="deleteTask">Delete</button>
 </div>
 </template>
 
@@ -11,23 +15,47 @@ import { useTaskStore } from '../stores/task';
 import { supabase } from '../supabase';
 
 const taskStore = useTaskStore();
-
+//--------------------------
+const name = ref("");
+const description = ref("");
+const emit = defineEmits(["getTasks"]);
+//--------------------------
 const props = defineProps({
     task: Object,
 });
 
 // Función para borrar la tarea a través de la store. El problema que tendremos aquí (y en NewTask.vue) es que cuando modifiquemos la base de datos los cambios no se verán reflejados en el v-for de Home.vue porque no estamos modificando la variable tasks guardada en Home. Usad el emit para cambiar esto y evitar ningún page refresh.
-const deleteTask = async() => {
-    await taskStore.deleteTask(props.task.id);
+//--------------------------------------------
+const editTask = async() => {
+    await taskStore.editTask(name.value, description.value, props.task.id);
+    emit("getTasks");
 };
 
+const doneTask = async() => {
+    done.value = !done.value;
+    await taskStore.doneTask(props.task.is_complete, props.task.id);
+    emit("getTasks");
+};
+
+const deleteTask = async() => {
+    await taskStore.deleteTask(props.task.id);
+    emit("getTasks");
+};
+//------------------------------------------------
 </script>
 
 <style>
 
-.container{
+.task-title {
+    padding: 20px 100px;
+    margin: 20px;
+}
+
+.flex-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: initial;
+    justify-content: space-evenly;
+    align-items: baseline;
 }
 
 </style>

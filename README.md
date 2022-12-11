@@ -31,7 +31,7 @@ Es una aplicacion creada con Vue.js que permite a usuarios crear una cuenta, añ
 ### 19 agosto:
 
 - Implentar la logica para el Sign Up, Sign In y Sing Out (Fet)
-- Implentar los componentes del Navbar y el Footer (Preguntar dema)
+- Implentar los componentes del Navbar y el Footer (Implementar un footer amb el que vulgui)
 - Empezar con el diseño HTML y CSS del componente addTask (a mitjes)
 
 ### 22 de agosto:
