@@ -22,6 +22,7 @@ import Nav from '../components/Nav.vue';
 import NewTask from '../components/NewTask.vue';
 import TaskItem from '../components/TaskItem.vue';
 
+
 const taskStore = useTaskStore();
 
 // Variable para guardar las tareas de supabase
