@@ -31,7 +31,7 @@ Es una aplicacion creada con Vue.js que permite a usuarios crear una cuenta, añ
 ### 19 agosto:
 
 - Implentar la logica para el Sign Up, Sign In y Sing Out (Fet)
-- Implentar los componentes del Navbar y el Footer (Implementar un footer amb el que vulgui)
+- Implentar los componentes del Navbar y el Footer (fet)
 - Empezar con el diseño HTML y CSS del componente addTask (a mitjes)
 
 ### 22 de agosto:
@@ -45,7 +45,7 @@ Es una aplicacion creada con Vue.js que permite a usuarios crear una cuenta, añ
 - Preparar la tienda task.js para poder conectar los botones con la base de datos
 - Añadir funcionalidad al boton toggle que permite cambiar el estado de la tarea
 - Añadir funcionalidad al boton de cambiar el nombre que permite al usuario cambiar el titulo de la tarea
-- Añadir funcionalidad al boton de borrar la tarea
+- Añadir funcionalidad al boton de borrar la tarea (fet)
 - Implemntar la funcionalidad de ocultar/mostrar contraseña a la hora de hacer Sign In
 - Adaptar el diseño a la version movil, en este caso solo hay solo media query que se activa a partir de 747px para abajo
 

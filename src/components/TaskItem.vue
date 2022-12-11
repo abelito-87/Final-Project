@@ -7,12 +7,14 @@
     <button class="buttons-change" @click="doneTask">Done</button>
     <button class="button-delete" @click="deleteTask">Delete</button>
 </div>
+ 
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import { useTaskStore } from '../stores/task';
 import { supabase } from '../supabase';
+
 
 const taskStore = useTaskStore();
 //--------------------------

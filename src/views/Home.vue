@@ -3,8 +3,8 @@
     <Nav />
 
     <div class="content"> 
-      <h3>Your account:</h3>
-      <router-link to="/account">Account</router-link>
+      <h3>Your account</h3>
+      <router-link class="account-link" to="/account">Account</router-link>
     </div>
     <NewTask  />
     <h1 class="title-task">Tasks:</h1>
@@ -12,6 +12,7 @@
     <TaskItem class="tasks" @my-event="getTasks" v-for="task in tasks" :key="task.id" :task="task" />
   </div>
   </div>
+  <Footer />
 </template>
 
 <script setup>
@@ -21,7 +22,7 @@ import { useRouter } from 'vue-router';
 import Nav from '../components/Nav.vue';
 import NewTask from '../components/NewTask.vue';
 import TaskItem from '../components/TaskItem.vue';
-
+import Footer from '../components/Footer.vue'
 
 const taskStore = useTaskStore();
 
@@ -40,7 +41,7 @@ getTasks();
 <style>
 
 .content h3 {
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 .content {
@@ -52,6 +53,14 @@ getTasks();
  display: flex;
  flex-direction: column;
  justify-content: space-around;
+}
+
+
+.account-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #c3bcbc;
+  font-size: 1.2rem;
 }
 </style>
 

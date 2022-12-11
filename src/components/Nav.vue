@@ -99,6 +99,9 @@ nav ul {
 .nav-home {
   text-decoration: none;
   font-weight: bold;
+  color: #c3bcbc;
+  font-size: 1.2rem;
+  padding: 30px 20px;
 }
 
 .button-logout {
@@ -112,6 +115,8 @@ nav ul {
 
 .welcome {
   font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
 }
 
 
