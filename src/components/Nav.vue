@@ -1,31 +1,35 @@
 <template>
-  <nav>
-    <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-    <router-link class="nav-home" to="/">
-      Home
-    </router-link>
+  <div id="container-fluid">
+    <nav class="navbar">
+      <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
 
-    <ul>
+      <router-link id="hamburger-wrap" class="nav-home" to="/">
+        Home
+      </router-link>
+      <ul>
         <li>
-          <router-link class="nav-home" to="/">Task Manager</router-link>
+          <router-link id="hamburger-wrap" class="nav-home" to="/">Task Manager</router-link>
         </li>
-
         <li>
-          <router-link class="nav-home" to="/account">Your Account</router-link>
+          <router-link id="hamburger-wrap" class="nav-home" to="/account">Your Account</router-link>
         </li>
-    </ul>
-
-    <div>
+      </ul>
       <ul>
         <li class="log-out-welcome">
+          <button class="hamburger" type="button" @click="menuOpen = !menuOpen">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__middle"></span>
+            <span class="icon-bar hamburger__line"></span>
+          </button>
           <p class="welcome">Welcome, user</p>
         </li>
         <li>
           <button @click="signOut" class="button-logout">Log out</button>
         </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
+
 </template>
 
 <script setup>
@@ -59,18 +63,28 @@ const signOut = async () => {
   try {
     await useUserStore().signOut();
     console.log("meme");
-    redirect.push({path:"/auth/login"});
+    redirect.push({ path: "/auth/login" });
     // call the user store and send the users info to backend to signOut
     // then redirect user to the homeView
-  } catch (error) { 
+  } catch (error) {
     errorMsg.value = error.message;
-      setTimeout(() => {
-        errorMsg.value = null;
-      }, 5000);
+    setTimeout(() => {
+      errorMsg.value = null;
+    }, 5000);
   }
   return;
   errorMsg.value = "error";
 };
+
+// BURGUER MENU---------------  
+/*
+new Vue({
+  el: '#app',
+  data: {
+    menuOpen: false
+  }
+});*/
+
 
 </script>
 
@@ -95,30 +109,4 @@ nav ul {
   align-items: center;
   text-decoration: none;
 }
-
-.nav-home {
-  text-decoration: none;
-  font-weight: bold;
-  color: #c3bcbc;
-  font-size: 1.2rem;
-  padding: 30px 20px;
-}
-
-.button-logout {
-    color: #fafafa;
-    margin:  20px 20px 20px 0;;
-    padding: 5px 20px;
-    border: 0px solid;
-    border-radius: 10px;
-    background-color: #E94D4D;
-}
-
-.welcome {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 20px;
-}
-
-
-
 </style>

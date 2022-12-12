@@ -31,10 +31,14 @@
           </p>
         </div>
       </form>
-      <img src="https://res.cloudinary.com/dn73thusg/image/upload/v1670485657/Final-Project/mesa_trabajo_ohzrvn.jpg"
-        id="mesa-trabajo" alt="Mesa de trabajo con ordenadore y cafe">
+      <div>
+        <img src="https://res.cloudinary.com/dn73thusg/image/upload/v1670831495/Final-Project/computer_png_azq7t9.jpg"
+          id="mesa-trabajo" alt="ordenador">
+      <img src="https://res.cloudinary.com/dn73thusg/image/upload/v1670831492/Final-Project/coffe_png_px8dj0.png" id="mesa-trabajo"
+       alt=" cup of coffe">
+      <img src="https://res.cloudinary.com/dn73thusg/image/upload/v1670831489/Final-Project/libretaYBoligrafo_png_hwx4ub.jpg"  id="mesa-trabajo" alt="libretas y boligrafo">
     </div>
-
+  </div>
     <div v-show="errorMsg">{{ errorMsg }}</div>
 
     <!--AQUI ACABO--------------------------------------------->

@@ -2,44 +2,72 @@
   <div class="wrapper">
     <Nav />
 
-    <div class="content"> 
+    <div class="content">
       <h3>Your account</h3>
       <router-link class="account-link" to="/account">Account</router-link>
     </div>
-    <NewTask  />
+    <NewTask />
     <h1 class="title-task">Tasks:</h1>
     <div class="allTasks">
-    <TaskItem class="tasks" @my-event="getTasks" v-for="task in tasks" :key="task.id" :task="task" />
-  </div>
+      <TaskItem class="tasks" @childDone="completeTaskParent" @childDelete="deleteTask" @childEdit="editTask"
+        v-for="task in taskStore.tasks" :key="task.id" :task="task" />
+    </div>
   </div>
   <Footer />
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted, onUpdated, ref } from "vue";
 import { useTaskStore } from "../stores/task";
-import { useRouter } from 'vue-router';
-import Nav from '../components/Nav.vue';
-import NewTask from '../components/NewTask.vue';
-import TaskItem from '../components/TaskItem.vue';
-import Footer from '../components/Footer.vue'
+import { useRouter } from "vue-router";
+import Nav from "../components/Nav.vue";
+import NewTask from "../components/NewTask.vue";
+import TaskItem from "../components/TaskItem.vue";
+import Footer from "../components/Footer.vue";
 
 const taskStore = useTaskStore();
 
-// Variable para guardar las tareas de supabase
-const tasks = ref([]);
-
-// Creamos una función que conecte a la store para conseguir las tareas de supabase
-const getTasks = async() => {
-  tasks.value = await taskStore.fetchTasks();
+//complete task parent
+const completeTaskParent = async (taskChildAbel) => {
+  const booleanValue = !taskChildAbel.is_complete;
+  const taskId = taskChildAbel.id;
+  //console.log(taskId);
+  //console.log(booleanValue);
+  await taskStore.doneTask(booleanValue, taskId);
+  taskStore.fetchTasks();
 };
 
-getTasks();
+//------funcion para delete----------
 
+const deleteTask = async (taskChildAbel) => {
+  await taskStore.deleteTask(taskChildAbel);
+  taskStore.fetchTasks();
+  console.log("wu tang clan");
+};
+
+//---------funcion edit task -------------
+
+const editTask = async (newTask) => {
+  await taskStore.editTask(
+    newTask.id,
+    newTask.title,
+    newTask.description
+  );
+  taskStore.fetchTasks();
+  console.log(newTask);
+  console.log('completed edited...');
+}
+
+onUpdated(() => {
+  // taskStore.fetchTasks();
+  // console.log('testing on updated...');
+});
+onMounted(() => {
+  taskStore.fetchTasks();
+});
 </script>
 
 <style>
-
 .content h3 {
   font-size: 1.2rem;
 }
@@ -50,11 +78,10 @@ getTasks();
 }
 
 .container {
- display: flex;
- flex-direction: column;
- justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
 
 .account-link {
   text-decoration: none;

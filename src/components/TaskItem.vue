@@ -1,13 +1,20 @@
 <template>
-<div>
-    <h3 class="task-title">{{task.title}}</h3>
-    <h5 class="task-description">{{task.description}}</h5>
-    <input class="input-description" type="text" v-model="description">
-    <button class="buttons-change" @click="editTask">Edit</button>
-    <button class="buttons-change" @click="doneTask">Done</button>
-    <button class="button-delete" @click="deleteTask">Delete</button>
-</div>
- 
+    <div>
+        <h3 class="task-title" :class="task.is_complete ? 'task-complete' : ''">{{ task.title }}</h3>
+        <h3 class="task-title">{{ task.id }}</h3>
+        <h5 class="task-description">{{ task.description }}</h5>
+        <template v-if="showInputs">
+            <form @submit.prevent="editTask">
+                <input class="input-title" type="text" v-model="title">
+                <input class="input-description" type="text" v-model="description">
+                <button type="submit">Update Task</button>
+            </form>
+        </template>
+        <button class="buttons-change" @click="showEditTask">Edit</button>
+        <button class="buttons-change" @click="completeTask">{{ task.is_complete ? "UnDone" : "Done" }}</button>
+        <button class="button-delete" @click="deleteTask">Delete</button>
+    </div>
+
 </template>
 
 <script setup>
@@ -18,39 +25,68 @@ import { supabase } from '../supabase';
 
 const taskStore = useTaskStore();
 //--------------------------
+let title = ref("");
+let description = ref("");
+
+const showInputs = ref(false);
+
 const name = ref("");
-const description = ref("");
-const emit = defineEmits(["getTasks"]);
+const emit = defineEmits(["childEdit", "childDone", "childDelete"]);
 //--------------------------
-const props = defineProps({
-    task: Object,
-});
+const props = defineProps(["task"]);
+/// ------------------------
+const done = ref(false)
 
 // Función para borrar la tarea a través de la store. El problema que tendremos aquí (y en NewTask.vue) es que cuando modifiquemos la base de datos los cambios no se verán reflejados en el v-for de Home.vue porque no estamos modificando la variable tasks guardada en Home. Usad el emit para cambiar esto y evitar ningún page refresh.
 //--------------------------------------------
-const editTask = async() => {
-    await taskStore.editTask(name.value, description.value, props.task.id);
-    emit("getTasks");
+// cambiar name por titulo?
+const showEditTask = () => {
+    showInputs.value = !showInputs.value
+    title.value = props.task.title;
+    description.value = props.task.description;
 };
 
-const doneTask = async() => {
-    done.value = !done.value;
-    await taskStore.doneTask(props.task.is_complete, props.task.id);
-    emit("getTasks");
-};
+// FALTA ACABAR EDIT
 
-const deleteTask = async() => {
-    await taskStore.deleteTask(props.task.id);
-    emit("getTasks");
+const editTask = () => {
+    console.log("hola mundo");
+    console.log(props.task.title);
+    console.log(props.task.description);
+
+    if (title.length === 0) {
+        console.log("el titulo esta vacio, porfavor introduce titulo");
+    } else {
+        let newTaskDescription = {
+            id: props.task.id,
+            title: props.task.title.value,
+            description: props.task.description.value
+        };
+        emit("childEdit", newTaskDescription);
+        showInputs.value = !showInputs.value
+    }
+}
+// funcion que se enarga de recibir una funcion desde el padre mediante un EMIT que es una manera de vue de poder implementar esta logica, basicamente una ayuda para pasar logica entre componente 
+const completeTask = () => {
+    emit("childDone", props.task)
+    //  console.log(props.task);
+}
+
+const deleteTask = () => {
+    //await taskStore.deleteTask(props.task.id);
+    emit("childDelete", props.task.id);
 };
 //------------------------------------------------
 </script>
 
 <style>
-
 .task-title {
     padding: 20px 100px;
     margin: 20px;
+}
+
+.task-complete {
+    text-decoration: line-through;
+    color: red;
 }
 
 .flex-container {
@@ -59,7 +95,6 @@ const deleteTask = async() => {
     justify-content: space-evenly;
     align-items: baseline;
 }
-
 </style>
 
 <!--
