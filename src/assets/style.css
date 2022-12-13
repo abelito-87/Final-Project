@@ -148,7 +148,36 @@ h3 {
 
 /* estils per les tasques*/
 
+/*NAVEGACION HOME*/
 
+#container-fluid {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+
+.navbar-img {
+  width: 90px;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding-inline-start: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+/*FIN*/
 
 .nav-home {
   text-decoration: none;
@@ -324,7 +353,7 @@ h3 {
 
 @media screen and (max-width: 750px) {
 
- /* BURGER MENU */
+ /* BURGER MENU position absolut -100vh top*/
 
 
  #container-fluid {

@@ -2,15 +2,16 @@
   <div id="container-fluid">
     <nav class="navbar">
       <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-
-      <router-link id="hamburger-wrap" class="nav-home" to="/">
-        Home
-      </router-link>
-      <ul>
-        <li>
+      <div>
+        <router-link id="hamburger-wrap" class="nav-home" to="/">
+          Home
+        </router-link>
+      </div>
+      <ul class="link-list">
+        <li class="task-manager">
           <router-link id="hamburger-wrap" class="nav-home" to="/">Task Manager</router-link>
         </li>
-        <li>
+        <li class="your-account">
           <router-link id="hamburger-wrap" class="nav-home" to="/account">Your Account</router-link>
         </li>
       </ul>
@@ -89,24 +90,5 @@ new Vue({
 </script>
 
 <style>
-.navbar-img {
-  width: 90px;
-}
 
-nav {
-  /*background-color: #EBECEE;*/
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  padding-inline-start: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-}
 </style>

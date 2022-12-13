@@ -54,7 +54,7 @@ const editTask = async (newTask) => {
     newTask.description
   );
   taskStore.fetchTasks();
-  console.log(newTask);
+  //console.log(newTask);
   console.log('completed edited...');
 }
 

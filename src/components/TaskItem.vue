@@ -49,17 +49,18 @@ const showEditTask = () => {
 // FALTA ACABAR EDIT
 
 const editTask = () => {
-    console.log("hola mundo");
     console.log(props.task.title);
     console.log(props.task.description);
 
     if (title.length === 0) {
         console.log("el titulo esta vacio, porfavor introduce titulo");
     } else {
+
+        console.log("hola mundo");
         let newTaskDescription = {
             id: props.task.id,
-            title: props.task.title.value,
-            description: props.task.description.value
+            title: title.value,
+            description: description.value
         };
         emit("childEdit", newTaskDescription);
         showInputs.value = !showInputs.value

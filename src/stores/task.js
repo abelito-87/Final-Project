@@ -28,7 +28,7 @@ export const useTaskStore = defineStore("tasks", {
       ]);
     },
     // -------------------------------------------
-    async editTask(title, description, id) {
+    async editTask(id, title, description) {
       console.log(useUserStore().user.id);
       const { data: tasks } = await supabase
         .from("tasks")
