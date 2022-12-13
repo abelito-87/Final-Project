@@ -103,7 +103,7 @@ const deleteTask = () => {
 
 .task-complete {
     text-decoration: line-through;
-    color: red;
+    color: #e94d4d;
 }
 
 .flex-container {
