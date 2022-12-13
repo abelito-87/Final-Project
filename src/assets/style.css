@@ -39,13 +39,16 @@ body {
     padding: 10px 20px;*/
   background-image: url("https://res.cloudinary.com/dn73thusg/image/upload/v1670776725/Final-Project/fondo_azul_claro_ovfgd9.jpg");
   margin-bottom: 80px;
+  background-size: cover;
+
 }
 
 .flex-Container {
-  display: flexbox;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
 }
 
 h3 {
@@ -53,13 +56,13 @@ h3 {
   font-family: "Rock Salt", cursive;
 }
 
-#mesa-trabajo {
-  width: 350px;
-  height: 350px;
- /* border-radius: 5px;
-  background-image: 0 10px 10px 0 rgba(202, 45, 45, 0);*/
-  filter: brightness(1.1);
-  mix-blend-mode: multiply;
+#image-zen {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 10px 10px 0;
+  background-image: 0 10px 10px 0 rgba(202, 45, 45, 0);
+ /* filter: brightness(1.1);
+  mix-blend-mode: multiply;*/
  
 }
 
@@ -71,20 +74,31 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  /*color: #c3bcbc;*/
 }
 
 .form-sign-in {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 10%;
+  margin: 0;
+}
+
+.form-signUp {
+  background-color: #9e99cd;
+  padding: 71px;
+  border-radius: 10px;
 }
 
 .form {
-  margin-top: 80px;
+  /*margin-top: 10px;*/
   background-color: #9e99cd;
-  padding: 80px;
-  border-radius: 10px;
+  padding-top: 72.5px;
+  padding-right: 72.5px;
+  padding-bottom: 72.5px;
+  padding-left: 72.5px;
+  border-radius: 10px 0px 0px 10px;
 }
 
 .input-field-label {
@@ -176,6 +190,15 @@ h3 {
   flex-direction: column;
   padding: 0 25%;
   margin-bottom: 20px;
+  
+}
+
+.input-field-task input {
+  padding: 20px;
+  border-radius: 10px;
+  border: #5a88d2;
+  font-family: "Rock Salt", cursive;
+  font-weight: bold;
 }
 
 .input-field-task-descript {
@@ -183,6 +206,14 @@ h3 {
   flex-direction: column;
   padding: 0 25%;
   margin-bottom: 20px;
+}
+
+.input-field-task-descript input  {
+    padding: 20px;
+    border-radius: 10px;
+    border: #5a88d2;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
 }
 
 .button-add {

@@ -7,55 +7,32 @@
         <p class="header-subtitle">Start organizing your tasks!</p>
       </div>
     </div>
-    
+
     <form @submit.prevent="signUp" class="form-sign-in">
-      <div class="form">
+      <div class="form-signUp">
         <div class="form-input">
           <label class="input-field-label">E-mail</label>
-          <input
-            type="email"
-            class="input-field"
-            placeholder="example@gmail.com"
-            id="email"
-            v-model="email"
-            required
-          />
+          <input type="email" class="input-field" placeholder="example@gmail.com" id="email" v-model="email" required />
         </div>
         <div class="form-input">
           <label class="input-field-label">Password</label>
-          <input
-            type="password"
-            class="input-field"
-            placeholder="**********"
-            id="password"
-            v-model="password"
-            required
-          />
+          <input type="password" class="input-field" placeholder="**********" id="password" v-model="password"
+            required />
         </div>
         <div class="form-input">
           <label class="input-field-label">Confirm password</label>
-          <input
-            type="password"
-            class="input-field"
-            placeholder="**********"
-            id="confirmPassword"
-            v-model="confirmPassword"
-            required
-          />
+          <input type="password" class="input-field" placeholder="**********" id="confirmPassword"
+            v-model="confirmPassword" required />
         </div>
         <button class="button-signup" type="submit">Sign Up</button>
         <p class="account">
           Have an account?
-          <PersonalRouter
-            :route="route"
-            :buttonText="buttonText"
-            class="sign-up-link"
-          />
+          <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link" />
         </p>
       </div>
     </form>
 
-    <div v-show="errorMsg">{{errorMsg}}</div>
+    <div v-show="errorMsg">{{ errorMsg }}</div>
   </div>
 </template>
 
@@ -105,4 +82,6 @@ const signUp = async () => {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>

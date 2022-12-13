@@ -1,8 +1,8 @@
 <!-- COMPONENTE BOILERPLATE -->
  
 <template>
-  
-   <body>
+
+  <body>
     <div class="container">
       <h3 class="header-title">Welcome to ToDo App</h3>
       <!--<p class="header-subtitle">Estamos en la ruta de login. Aquí deberíais crear un form con la lógica correspondiente
@@ -32,13 +32,10 @@
         </div>
       </form>
       <div>
-        <img src="https://res.cloudinary.com/dn73thusg/image/upload/v1670831495/Final-Project/computer_png_azq7t9.jpg"
-          id="mesa-trabajo" alt="ordenador">
-      <img src="https://res.cloudinary.com/dn73thusg/image/upload/v1670831492/Final-Project/coffe_png_px8dj0.png" id="mesa-trabajo"
-       alt=" cup of coffe">
-      <img src="https://res.cloudinary.com/dn73thusg/image/upload/v1670831489/Final-Project/libretaYBoligrafo_png_hwx4ub.jpg"  id="mesa-trabajo" alt="libretas y boligrafo">
+        <img src="https://res.cloudinary.com/dn73thusg/image/upload/v1670516350/Final-Project/img_signin_hzpcs0.jpg"
+          id="image-zen" alt="imagen zen">
+      </div>
     </div>
-  </div>
     <div v-show="errorMsg">{{ errorMsg }}</div>
 
     <!--AQUI ACABO--------------------------------------------->
