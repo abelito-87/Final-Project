@@ -2,11 +2,9 @@
   <div id="container-fluid">
     <nav class="navbar">
       <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-      <div>
-        <router-link id="hamburger-wrap" class="nav-home" to="/">
-          Home
-        </router-link>
-      </div>
+      <router-link id="hamburger-wrap" class="nav-home" to="/">
+        Home
+      </router-link>
       <ul class="link-list">
         <li class="task-manager">
           <router-link id="hamburger-wrap" class="nav-home" to="/">Task Manager</router-link>
@@ -22,6 +20,19 @@
             <span class="hamburger__middle"></span>
             <span class="icon-bar hamburger__line"></span>
           </button>
+          <!--<div class="row dropdown" :class="{ 'dropdown-after': menuOpen }">
+            <router-link id="hamburger-wrap" class="nav-home" to="/">
+              Home
+            </router-link>
+            <ul class="link-list">
+              <li class="task-manager">
+                <router-link id="hamburger-wrap" class="nav-home" to="/">Task Manager</router-link>
+              </li>
+              <li class="your-account">
+                <router-link id="hamburger-wrap" class="nav-home" to="/account">Your Account</router-link>
+              </li>
+            </ul> 
+            </div>-->
           <p class="welcome">Welcome, user</p>
         </li>
         <li>
@@ -39,6 +50,8 @@ import { useUserStore } from "../stores/user";
 import { computed } from "vue";
 import { useRouter } from "vue-router";
 import { ref } from 'vue';
+
+//import burguer from './burguer.vue'
 
 //constant to save a variable that will hold the use router method
 const route = "/";
@@ -76,16 +89,6 @@ const signOut = async () => {
   return;
   errorMsg.value = "error";
 };
-
-// BURGUER MENU---------------  
-/*
-new Vue({
-  el: '#app',
-  data: {
-    menuOpen: false
-  }
-});*/
-
 
 </script>
 

@@ -361,29 +361,62 @@ nav ul {
   background-color: #1d1919;
   color: #c3bcbc;
 }
-/*
-.giphy-embed {
-  width: 20%;
-}*/
+
+
+/* ACCOUNT */
+
+.name-account {
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.avatar-img {
+  margin-left: 30px;
+  border-radius: 50%;
+  
+}
 
 
 @media screen and (max-width: 750px) {
 
- /* BURGER MENU position absolut -100vh top*/
-
+ /* BURGER MENU */
 
  #container-fluid {
    flex-direction: row;
    background-color: #1d1919;
    
- }
+  }
 
- .nav-home{
-  color: #5a88d2;
+  .hamburger-wrap {
+    width: 100px;
+    height: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger:focus {
+    outline: none;
+  }
+  
+  .nav-home{
+    color: #5a88d2;
+    position: absolute;
+    top: -100vh;
  }
 
  .welcome {
   color: #c3bcbc;
+  position: absolute;
+  top: -100vh;
+ }
+
+ .button-logout {
+    position: absolute;
+    top: -100vh;
  }
  
  .hamburger {
@@ -410,7 +443,7 @@ nav ul {
   width: 20px;
   margin-left: 12px;
 }
-
+/*
 .dropdown {
   margin-top: -20px;
   height: 0px;
@@ -425,7 +458,7 @@ nav ul {
 .dropdown-after {
   height: calc(100vh - 50px);
   transition: height 0.2s ease;
-}
+}*/
 
 .navlist {
   list-style: none;
@@ -436,5 +469,37 @@ nav ul {
   text-align: center;
   padding: 20px;
 }
+
+/* FORMULARI SIGN IN */
+
+.header-title {
+  text-align: center;
+}
+
+.form {
+  border-radius: 10px;
+}
+
+#image-zen {
+  border-radius: 0;
+}
+
+/* FORMULARI SIGN UP */
+
+.register-title {
+  text-align: center;
+}
+
+.header-subtitle {
+  text-align: center;
+}
+
+/* FOOTER */ 
+
+.footer {
+  text-align: center;
+  justify-content: flex-start;
+}
+
 
 }
