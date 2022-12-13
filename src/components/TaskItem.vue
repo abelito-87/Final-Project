@@ -6,8 +6,8 @@
         <template v-if="showInputs">
             <form @submit.prevent="editTask">
                 <input class="input-title" type="text" v-model="title">
-                <input class="input-description" type="text" v-model="description">
-                <button type="submit">Update Task</button>
+                <input class="input-description-task" type="text" v-model="description">
+                <button class="button-update" type="submit">Update Task</button>
             </form>
         </template>
         <button class="buttons-change" @click="showEditTask">Edit</button>
@@ -80,8 +80,24 @@ const deleteTask = () => {
 
 <style>
 .task-title {
-    padding: 20px 100px;
+    padding: 0 100px;
     margin: 20px;
+    border: 1px solid #1d1919;
+    border-radius: 10px;
+    background-color: #1d1919;
+    color: #c3bcbc;
+}
+
+.task-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    padding: 25px;
+    border: 1px solid #1d1919;
+    border-radius: 10px;
+    background-color: #1d1919;
+    color: #c3bcbc;
 }
 
 .task-complete {

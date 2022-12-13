@@ -69,13 +69,15 @@ h3 {
 
 
 .header-title {
-  margin: 60px 50px;
+  margin: 60px 0;
   font-size: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  /*color: #c3bcbc;*/
+  border: 1px solid #1d1919;
+  background-color: #1d1919;
+  color: #c3bcbc;
 }
 
 .form-sign-in {
@@ -181,8 +183,11 @@ h3 {
   text-align: center;
   font-weight: bold;
   font-size: 2.5rem;
-  margin: 30px 0;
+  margin: 0 0 30px 0;
+  padding: 30px;
   font-family: "Rock Salt", cursive;
+  background-color: #1d1919;
+  color: #c3bcbc;
 }
 
 .input-field-task {
@@ -276,6 +281,29 @@ h3 {
   margin-right: 20px;
 }
 
+.button-update {
+  color: #c3bcbc;
+  margin: 20px;
+  padding: 5px 20px;
+  border: 0px solid;
+  border-radius: 10px;
+  background-color: #5a88d2;
+  cursor: pointer;
+}
+
+.input-title {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Rock Salt", cursive;
+}
+.input-description-task {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Lato", sans-serif;
+}
+
 /* FOOTER STYLE */
 
 .footer {
@@ -283,7 +311,15 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  border: 1px solid #1d1919;
+  background-color: #1d1919;
+  color: #c3bcbc;
 }
+/*
+.giphy-embed {
+  width: 20%;
+}*/
 
 
 @media screen and (max-width: 750px) {
