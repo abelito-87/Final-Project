@@ -41,25 +41,25 @@ Es una aplicacion creada con Vue.js que permite a usuarios crear una cuenta, añ
 ### 22 de agosto:
 
 - Implementar la funcionalidad de addTask y taskItem
-  (A MITJES)
+  (FET)
 - Añadir el diseño HTML y CSS del componente taskItem
   (A MITJES, FALTA ESTIL AL BOTO EDIT)
 - Hacer el fetch de las tareas de Supabase al cargar la pagina y cada vez que se ejecute alguna accion de cambio
-  (A MITJES, FALTA BOTO EDIT)
+  (FET)
 
 ### 23 de agosto:
 
 - Preparar la tienda task.js para poder conectar los botones con la base de datos
-  (A MITJES, FALTA BOTO EDIT)
+  (FET)
 - Añadir funcionalidad al boton toggle que permite cambiar el estado de la tarea
   (FET)
 - Añadir funcionalidad al boton de cambiar el nombre que permite al usuario cambiar el titulo de la tarea
-  (A MITJES)
+  (FET)
 - Añadir funcionalidad al boton de borrar la tarea
   (FET)
 - Implemntar la funcionalidad de ocultar/mostrar contraseña a la hora de hacer Sign In
   (FALTA FER AIXO)
-- Adaptar el diseño a la version movil, en este caso solo hay solo media query que se activa a partir de 747px para abajo
+- Adaptar el diseño a la version movil, en este caso solo hay media query que se activa a partir de 747px para abajo
   (A MITJES)
 
 ### 24 de agosto:
