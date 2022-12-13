@@ -19,7 +19,6 @@
                     </li>
                 </ul>
             </div>
-            <p class="welcome">Welcome, user</p>
         </li>
     </ul>
 </template>
