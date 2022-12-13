@@ -69,7 +69,7 @@ h3 {
 
 
 .header-title {
-  margin: 60px 0;
+  margin: 60px 0 0 0;
   font-size: 3rem;
   display: flex;
   flex-direction: column;
@@ -78,6 +78,19 @@ h3 {
   border: 1px solid #1d1919;
   background-color: #1d1919;
   color: #c3bcbc;
+}
+
+.header-subtitle-signin {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #1d1919;
+  background-color: #1d1919;
+  color: #c3bcbc;
+  margin: 0 0 60px 0;
+  padding-bottom: 20px;
 }
 
 .form-sign-in {
@@ -144,12 +157,12 @@ h3 {
   flex-direction: column;
   align-items: center;
   font-weight: bold;
-  font-size: 1.2rem;
-  font-family: "Rock Salt", cursive;
+  font-size: 1.5rem;
   border: 1px solid #1d1919;
   background-color: #1d1919;
   color: #c3bcbc;
   margin-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .button-signup {
@@ -443,7 +456,7 @@ nav ul {
   width: 20px;
   margin-left: 12px;
 }
-/*
+
 .dropdown {
   margin-top: -20px;
   height: 0px;
@@ -458,7 +471,7 @@ nav ul {
 .dropdown-after {
   height: calc(100vh - 50px);
   transition: height 0.2s ease;
-}*/
+}
 
 .navlist {
   list-style: none;
@@ -500,6 +513,32 @@ nav ul {
   text-align: center;
   justify-content: flex-start;
 }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .header-title {
+    text-align: center;
+  }
+  
+  .form {
+    border-radius:10px 10px 0 0;
+  }
+  
+  #image-zen {
+    border-radius: 0;
+  }
+  
+  .header-subtitle-signin {
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 568px) {
+
 
 
 }

@@ -28,6 +28,8 @@ const taskStore = useTaskStore();
 const name = ref('');
 const description = ref('');
 
+const emit = defineEmits(["childNew"]);
+
 // constant to save a variable that holds an initial false boolean value for the errorMessage container that is conditionally displayed depending if the input field is empty
 const showErrorMessage = ref(false);
 
@@ -48,10 +50,16 @@ const addTask = () => {
     } else {
         // Aquí mandamos los valores a la store para crear la nueva Task. Esta parte de la función tenéis que refactorizarla para que funcione con emit y el addTask del store se llame desde Home.vue.
 
-        taskStore.addTask(name.value, description.value);
+        let newTaskDescription = {
+            title: name.value,
+            description: description.value
+        };
+
+
+        emit("childNew", newTaskDescription);
+
         name.value = '';
         description.value = '';
-
 
     }
 };

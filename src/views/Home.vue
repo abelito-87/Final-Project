@@ -6,7 +6,7 @@
       <!-- <h3>Your account</h3> -->
       <!-- <router-link class="account-link" to="/account">Account</router-link> -->
     </div>
-    <NewTask />
+    <NewTask @childNew="addTask" />
     <h1 class="title-task">Tasks:</h1>
     <div class="allTasks">
       <TaskItem class="tasks" @childDone="completeTaskParent" @childDelete="deleteTask" @childEdit="editTask"
@@ -21,8 +21,9 @@ import { onMounted, onUpdated, ref } from "vue";
 import { useTaskStore } from "../stores/task";
 import { useRouter } from "vue-router";
 import Nav from "../components/Nav.vue";
-import NewTask from "../components/NewTask.vue";
 import TaskItem from "../components/TaskItem.vue";
+import NewTask from "../components/NewTask.vue";
+
 import Footer from "../components/Footer.vue";
 
 const taskStore = useTaskStore();
@@ -43,6 +44,14 @@ const deleteTask = async (taskChildAbel) => {
   await taskStore.deleteTask(taskChildAbel);
   taskStore.fetchTasks();
   console.log("wu tang clan");
+};
+
+//------funcion para add----------
+
+const addTask = async (newTask) => {
+  await taskStore.addTask(newTask.title, newTask.description);
+  taskStore.fetchTasks();
+  console.log("add task");
 };
 
 //---------funcion edit task -------------
