@@ -43,6 +43,12 @@ body {
 
 }
 
+#logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
 .flex-Container {
   display: flex;
   flex-direction: row;
@@ -50,6 +56,7 @@ body {
   align-items: flex-end;
   flex-wrap: wrap;
 }
+
 
 h3 {
   padding: 10px 0;
@@ -517,7 +524,7 @@ nav ul {
 
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width:569px) and (max-width: 1024px) {
 
   .header-title {
     text-align: center;

@@ -21,7 +21,7 @@
           <button @click="signOut" class="button-logout">Log out</button>
         </li>
       </ul>
-      <burguer @click="openBurger" :menuOpen="menuOpen" />
+      <burguer @openBurger="openBurger" :menuOpen="menuOpen" />
     </nav>
   </div>
 
@@ -41,9 +41,11 @@ import burguer from "./burguer.vue";
 const route = "/";
 const buttonText = "Todo app";
 
-let menuOpen = true;
+// funcion burguer
+
+let menuOpen = ref(true);
 const openBurger = () => {
-  menuOpen = !menuOpen;
+  menuOpen.value = !menuOpen.value;
   console.log(menuOpen)
 }
 

@@ -1,5 +1,5 @@
 <template>
-    <ul>
+    <ul @click="emit('openBurger')">
         <li class="log-out-welcome">
             <button class="hamburger" type="button">
                 <span class="hamburger__line"></span>
@@ -23,6 +23,9 @@
     </ul>
 </template>
 <script setup>
+
+const emit = defineEmits(["openBurger"]);
+const props = defineProps(["menuOpen"]);
 /*new Vue({
     el: '#app',
     : {
