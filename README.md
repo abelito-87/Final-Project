@@ -27,7 +27,7 @@ Es una aplicacion creada con Vue.js que permite a usuarios crear una cuenta, añ
 ### 18 agosto:
 
 - Implentar HTML y CSS del Sign Up y Sing In
-  (FET, FALTA ALGUN DETALL)
+  (FET)
 
 ### 19 agosto:
 
@@ -36,14 +36,14 @@ Es una aplicacion creada con Vue.js que permite a usuarios crear una cuenta, añ
 - Implentar los componentes del Navbar y el Footer
   (FET)
 - Empezar con el diseño HTML y CSS del componente addTask
-  (FET, FALTA ALGUN DETALL)
+  (FET)
 
 ### 22 de agosto:
 
 - Implementar la funcionalidad de addTask y taskItem
   (FET)
 - Añadir el diseño HTML y CSS del componente taskItem
-  (A MITJES, FALTA ESTIL AL BOTO EDIT)
+  (FET)
 - Hacer el fetch de las tareas de Supabase al cargar la pagina y cada vez que se ejecute alguna accion de cambio
   (FET)
 
@@ -65,7 +65,7 @@ Es una aplicacion creada con Vue.js que permite a usuarios crear una cuenta, añ
 ### 24 de agosto:
 
 - Implementar menu hamburguesa para versiones moviles
-  (A MITJES)
+  (FET)
 - Cuando el usuario clique en el boton de toggle y cambie el estado de la tarea a "Hecha", esta se tacha
   (FET)
 - Subir el proyecto a Vercel para que este disponible para todo el mundo
