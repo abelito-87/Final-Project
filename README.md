@@ -71,6 +71,7 @@ Es una aplicacion creada con Vue.js que permite a usuarios crear una cuenta, añ
 - Subir el proyecto a Vercel para que este disponible para todo el mundo
   (FET)
 - Comenzar con la parte del perfil de usuario ~~(opcional)~~
+  (FALTA FER AIXO)
 
 ### 25 de agosto:
 
