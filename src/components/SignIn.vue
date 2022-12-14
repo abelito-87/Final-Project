@@ -3,12 +3,15 @@
 <template>
 
   <body>
-    <div class="container">
+    <div class="div-logo">
       <img id="logo"
         src="https://res.cloudinary.com/dn73thusg/image/upload/v1671006278/Final-Project/ToDo_App_kvnzp6.jpg"
         alt="logo ToDo App">
-      <h3 class="header-title">Welcome to ToDo App</h3>
+    </div>
+    <div class="container">
+      <h3 class="header-title"> Welcome to ToDo App </h3>
       <h5 class="header-subtitle-signin">Here you can create your to-do lists</h5>
+
       <!--<p class="header-subtitle">Estamos en la ruta de login. Aquí deberíais crear un form con la lógica correspondiente
         para que este permita al usuario loguearse con su email y su contraseña. Miraros la lógica de SignUp si
         necesitáis inspiración :)</p>

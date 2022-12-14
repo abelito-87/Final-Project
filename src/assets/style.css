@@ -40,13 +40,6 @@ body {
   background-image: url("https://res.cloudinary.com/dn73thusg/image/upload/v1670776725/Final-Project/fondo_azul_claro_ovfgd9.jpg");
   margin-bottom: 80px;
   background-size: cover;
-
-}
-
-#logo {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
 }
 
 .flex-Container {
@@ -57,6 +50,17 @@ body {
   flex-wrap: wrap;
 }
 
+#logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.div-logo {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 30px;
+}
 
 h3 {
   padding: 10px 0;
@@ -68,12 +72,9 @@ h3 {
   height: 100%;
   border-radius: 0px 10px 10px 0;
   background-image: 0 10px 10px 0 rgba(202, 45, 45, 0);
- /* filter: brightness(1.1);
+  /* filter: brightness(1.1);
   mix-blend-mode: multiply;*/
- 
 }
-
-
 
 .header-title {
   margin: 60px 0 0 0;
@@ -189,9 +190,7 @@ h3 {
 #container-fluid {
   display: flex;
   flex-direction: row;
-  
 }
-
 
 .navbar-img {
   width: 90px;
@@ -213,6 +212,13 @@ nav ul {
   text-decoration: none;
 }
 
+.link-list {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin-left: 512px;
+}
+
 /*FIN*/
 
 .nav-home {
@@ -228,14 +234,14 @@ nav ul {
 }
 
 .button-logout {
-    display: flex;
-    color: #fafafa;
-    margin:  20px 20px 20px 0;;
-    padding: 5px 20px;
-    border: 0px solid;
-    border-radius: 10px;
-    background-color: #E94D4D;
-    cursor: pointer;
+  display: flex;
+  color: #fafafa;
+  margin: 20px 20px 20px 0;
+  padding: 5px 20px;
+  border: 0px solid;
+  border-radius: 10px;
+  background-color: #e94d4d;
+  cursor: pointer;
 }
 
 .welcome {
@@ -260,7 +266,6 @@ nav ul {
   flex-direction: column;
   padding: 0 25%;
   margin-bottom: 20px;
-  
 }
 
 .input-field-task input {
@@ -278,12 +283,12 @@ nav ul {
   margin-bottom: 20px;
 }
 
-.input-field-task-descript input  {
-    padding: 20px;
-    border-radius: 10px;
-    border: #5a88d2;
-    font-family: "Lato", sans-serif;
-    font-weight: bold;
+.input-field-task-descript input {
+  padding: 20px;
+  border-radius: 10px;
+  border: #5a88d2;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 
 .button-add {
@@ -375,13 +380,31 @@ nav ul {
   font-size: 2rem;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid #1d1919;
   background-color: #1d1919;
   color: #c3bcbc;
+  padding: 30px;
 }
 
+#logo-footer {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.footer-links {
+  text-decoration: none;
+  font-weight: bold;
+  color: #5a88d2;
+  list-style: none;
+}
+
+.footer p {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
 
 /* ACCOUNT */
 
@@ -395,157 +418,383 @@ nav ul {
 .avatar-img {
   margin-left: 30px;
   border-radius: 50%;
-  
 }
 
+@media screen and (min-width: 569px) and (max-width: 1080px) {
+  /* BURGER MENU */
 
-@media screen and (max-width: 750px) {
-
- /* BURGER MENU */
-
- #container-fluid {
-   flex-direction: row;
-   background-color: #1d1919;
-   
+  .link-list {
+    position: absolute;
+    top: -100vh;
   }
 
-  .hamburger-wrap {
-    width: 100px;
-    height: 100%;
-    margin-left: 50px;
-    margin-right: 50px;
-    display: flex;
-    align-items: center;
+  .hamburger {
+    /* position: absolute;*/
+    margin: 10px 156px;
+    width: 45px;
+    height: 45px;
+    background-color: #5a88d2;
+    border-radius: 4px;
+    cursor: pointer;
   }
-
   .hamburger:focus {
     outline: none;
   }
-  
-  .nav-home{
-    color: #5a88d2;
+
+  .hamburger__line,
+  .hamburger__middle {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #c3bcbc;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+  }
+
+  .hamburger__middle {
+    width: 20px;
+    margin-left: 12px;
+  }
+
+  .dropdown {
+    background-color: #e94d4d;
+    transition: height 0.2s ease;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;*/
     position: absolute;
-    top: -100vh;
- }
+    top: -100%;
+  }
 
- .welcome {
-  color: #c3bcbc;
-  position: absolute;
-  top: -100vh;
- }
+  .dropdown-after {
+    /*height: calc(50vh - 50px);*/
+    transition: height 0.5s ease;
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
 
- .button-logout {
-    position: absolute;
-    top: -100vh;
- }
- 
- .hamburger {
-  margin-top: 10px;
-  width: 45px;
-  height: 45px;
-  background-color: #5a88d2;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.hamburger__line,
-.hamburger__middle {
-  display: block;
-  width: 30px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #c3bcbc;
-  margin-top: 7px;
-  margin-bottom: 7px;
-  margin-left: 7px;
-}
+  .log-out-welcome {
+    width: 5vw;
+  }
 
-.hamburger__middle {
-  width: 20px;
-  margin-left: 12px;
-}
-
-.dropdown {
-  margin-top: -20px;
-  height: 0px;
-  background-color: lightgreen;
-  transition: height 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.dropdown-after {
-  height: calc(100vh - 50px);
-  transition: height 0.2s ease;
-}
-
-.navlist {
-  list-style: none;
-}
-
-.navlistitem {
-  text-transform: uppercase;
-  text-align: center;
-  padding: 20px;
-}
+  .nav-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fafafa;
+    text-decoration:underline;
+  }
 
 /* FORMULARI SIGN IN */
-
-.header-title {
-  text-align: center;
-}
-
-.form {
-  border-radius: 10px;
-}
-
-#image-zen {
-  border-radius: 0;
-}
-
-/* FORMULARI SIGN UP */
-
-.register-title {
-  text-align: center;
-}
-
-.header-subtitle {
-  text-align: center;
-}
-
-/* FOOTER */ 
-
-.footer {
-  text-align: center;
-  justify-content: flex-start;
-}
-
-
-}
-
-@media screen and (min-width:569px) and (max-width: 1024px) {
 
   .header-title {
     text-align: center;
   }
-  
+
   .form {
-    border-radius:10px 10px 0 0;
+    border-radius: 10px;
   }
-  
+
   #image-zen {
     border-radius: 0;
   }
+
+  /* FORMULARI SIGN UP */
+
+  .register-title {
+    text-align: center;
+  }
+
+  .header-subtitle {
+    text-align: center;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    text-align: center;
+    justify-content: flex-start;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #logo-footer {
+    margin-bottom: 20px;
+  }
   
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 568px) {
+  /* BURGER MENU */
+
+  .link-list {
+    position: absolute;
+    top: -100vh;
+  }
+
+  .hamburger {
+    /* position: absolute;*/
+    margin: 10px 156px;
+    width: 45px;
+    height: 45px;
+    background-color: #5a88d2;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .hamburger:focus {
+    outline: none;
+  }
+
+  .hamburger__line,
+  .hamburger__middle {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #c3bcbc;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+  }
+
+  .hamburger__middle {
+    width: 20px;
+    margin-left: 12px;
+  }
+
+  .dropdown {
+    background-color: #e94d4d;
+    transition: height 0.2s ease;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;*/
+    position: absolute;
+    top: -100%;
+  }
+
+  .dropdown-after {
+    /*height: calc(50vh - 50px);*/
+    transition: height 0.5s ease;
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .log-out-welcome {
+    width: 48vw;
+  }
+
+  .nav-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fafafa;
+    text-decoration:underline;
+  }
+  
+  /*SIGN IN UP*/
+
+  .header-title {
+    text-align: center;
+  }
+
+  .form {
+    border-radius: 10px 10px 0 0;
+  }
+
+  #image-zen {
+    border-radius: 0;
+  }
+
   .header-subtitle-signin {
     text-align: center;
   }
 
+  .form {
+    border-radius: 10px 10px 0 0;
+    padding: 0 200px 20px 200px;
+  }
+
+  /* TASKS MOBILE */
+
+  .tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: #1d1919;
+    padding: 20px;
+    margin: -2px 10px;
+    background-image: url(https://res.cloudinary.com/dn73thusg/image/upload/v1670781056/Final-Project/cemento_pulido_tcdzx3.webp);
+  }
+
+  .task-title {
+    padding: 0 150px;
+    background-color: #9e99cd;
+    color: #1d1919;
+  }
+
+  .task-description {
+    background-color: #9e99cd;
+    color: #1d1919;
+  }
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (min-width: 320px) and (max-width: 568px) {
+  /* BURGER MENU */
 
+  .link-list {
+    position: absolute;
+    top: -100vh;
+  }
 
+  .hamburger {
+    /* position: absolute;*/
+    margin: 10px 156px;
+    width: 45px;
+    height: 45px;
+    background-color: #5a88d2;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .hamburger:focus {
+    outline: none;
+  }
 
+  .hamburger__line,
+  .hamburger__middle {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #c3bcbc;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+  }
+
+  .hamburger__middle {
+    width: 20px;
+    margin-left: 12px;
+  }
+
+  .dropdown {
+    background-color: #e94d4d;
+    transition: height 0.2s ease;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;*/
+    position: absolute;
+    top: -100%;
+  }
+
+  .dropdown-after {
+    /*height: calc(50vh - 50px);*/
+    transition: height 0.5s ease;
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .log-out-welcome {
+    width: 48vw;
+  }
+
+  .nav-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fafafa;
+    text-decoration:underline;
+  }
+
+  /*SIGN IN UP*/
+
+  .header-title {
+    text-align: center;
+  }
+
+  .form {
+    border-radius: 10px 10px 0 0;
+    padding: 0 100px 20px 100px;
+  }
+
+  #image-zen {
+    border-radius: 0;
+  }
+
+  .header-subtitle-signin {
+    text-align: center;
+  }
+
+  .register-title {
+    text-align: center;
+  }
+
+  /* TASKS MOBILE */
+
+  .tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: #1d1919;
+    padding: 20px;
+    margin: -2px 10px;
+    background-image: url(https://res.cloudinary.com/dn73thusg/image/upload/v1670781056/Final-Project/cemento_pulido_tcdzx3.webp);
+  }
+
+  .task-title {
+    padding: 0 150px;
+    background-color: #9e99cd;
+    color: #1d1919;
+  }
+
+  .task-description {
+    background-color: #9e99cd;
+    color: #1d1919;
+  }
+
+  .task-complete {
+    text-decoration: line-through;
+    color: #e94d4d;
+  }
+
+  /* FOOTER MOBILE*/
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer h3 {
+    margin: 10px;
+  }
+
+  #logo-footer {
+    margin-bottom: 20px;
+  }
 }

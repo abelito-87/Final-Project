@@ -2,17 +2,18 @@
     <footer class="footer">
         <h3>Good work , keep it up</h3>
 
-        <iframe src="https://giphy.com/embed/kLOkqcrdC5mrCE7k7G" frameBorder="0" class="giphy-embed"
-            allowFullScreen></iframe>
+        <img id="logo-footer"
+            src="https://res.cloudinary.com/dn73thusg/image/upload/v1671006278/Final-Project/ToDo_App_kvnzp6.jpg"
+            alt="logo ToDo App">
         <ul>
             <li>
-                <a href="#">Legal aspects</a>
+                <a class="footer-links" href="#">Legal aspects</a>
             </li>
             <li>
-                <a href="#">Privacy policy</a>
+                <a class="footer-links" href="#">Privacy policy</a>
             </li>
             <li>
-                <a href="#">Security</a>
+                <a class="footer-links" href="#">Security</a>
             </li>
         </ul>
         <br>

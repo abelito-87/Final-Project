@@ -2,7 +2,7 @@
   <div id="container-fluid">
     <nav class="navbar">
       <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-      <router-link id="hamburger-wrap" class="nav-home" to="/">
+      <!--  <router-link id="hamburger-wrap" class="nav-home" to="/">
         Home
       </router-link>
       <ul class="link-list">
@@ -12,8 +12,8 @@
         <li class="your-account">
           <router-link id="hamburger-wrap" class="nav-home" to="/account">Your Account</router-link>
         </li>
-      </ul>
-      <ul>
+      </ul> -->
+      <ul class="link-list">
         <li>
           <p class="welcome">Welcome, user</p>
         </li>
