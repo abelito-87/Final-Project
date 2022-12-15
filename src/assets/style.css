@@ -587,7 +587,7 @@ nav ul {
     padding: 0 80px;
     background-color: #9e99cd;
     color: #1d1919;
-    text-align: center;
+    /*text-align: center;*/
   }
 
   .task-description {
