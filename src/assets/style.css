@@ -584,7 +584,7 @@ nav ul {
   }
 
   .task-title {
-   /* padding: 0 150px;*/
+    padding: 0 80px;
     background-color: #9e99cd;
     color: #1d1919;
     text-align: center;
