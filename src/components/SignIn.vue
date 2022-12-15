@@ -30,6 +30,9 @@
             <label class="input-field-label">Password</label>
             <input type="password" class="input-field" placeholder="**********" id="password" v-model="password"
               required />
+            <!--mostrar contrassenya-->
+            <input class="show-password" type="button" name="wf" @click="mostrar()" value="Show password">
+            <!---->
           </div>
           <button class="button-login" type="submit">Log In</button>
           <p class="account">
@@ -86,6 +89,23 @@ const signIn = async () => {
   errorMsg.value = "error";
 };
 // AQUI ACABO
+
+//mostrar contraseña
+
+
+
+function mostrar() {
+  let tipo = document.getElementById("password");
+
+  if (tipo.type == "password") {
+    tipo.type = 'text';
+  } else {
+    tipo.type = 'password';
+  }
+
+}
+
+
 </script>
 
 <style>

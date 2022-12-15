@@ -4,7 +4,7 @@
         <h3 class="task-title">{{ task.id }}</h3>
         <h5 class="task-description">{{ task.description }}</h5>
         <template v-if="showInputs">
-            <form @submit.prevent="editTask">
+            <form class="form-tasks" @submit.prevent="editTask">
                 <input class="input-title" type="text" v-model="title">
                 <input class="input-description-task" type="text" v-model="description">
                 <button class="button-update" type="submit">Update Task</button>

@@ -14,14 +14,14 @@
         </li>
       </ul> -->
       <ul class="link-list">
+        <burguer @openBurger="openBurger" :menuOpen="menuOpen" />
         <li>
           <p class="welcome">Welcome, user</p>
-        </li>
-        <li>
           <button @click="signOut" class="button-logout">Log out</button>
         </li>
+
       </ul>
-      <burguer @openBurger="openBurger" :menuOpen="menuOpen" />
+
     </nav>
   </div>
 
@@ -43,7 +43,7 @@ const buttonText = "Todo app";
 
 // funcion burguer
 
-let menuOpen = ref(true);
+let menuOpen = ref(false);
 const openBurger = () => {
   menuOpen.value = !menuOpen.value;
   console.log(menuOpen)
