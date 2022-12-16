@@ -584,10 +584,13 @@ nav ul {
   }
 
   .task-title {
-    padding: 0 80px;
+    padding: 0 4px;
     background-color: #9e99cd;
     color: #1d1919;
     /*text-align: center;*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre;
   }
 
   .task-description {
