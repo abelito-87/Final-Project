@@ -601,6 +601,11 @@ nav ul {
     align-items: center;
   }
 
+  .task-complete {
+    text-decoration: line-through;
+    color: #e94d4d;
+}
+
     /* FOOTER MOBILE*/
 
   .footer {
