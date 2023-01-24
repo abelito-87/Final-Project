@@ -2,9 +2,9 @@
     <footer class="footer">
         <h3>Good work , keep it up</h3>
 
-        <img id="logo-footer"
+        <!--<img id="logo-footer"
             src="https://res.cloudinary.com/dn73thusg/image/upload/v1671006278/Final-Project/ToDo_App_kvnzp6.jpg"
-            alt="logo ToDo App">
+            alt="logo ToDo App">-->
         <ul>
             <li>
                 <a class="footer-links" href="#">Legal aspects</a>

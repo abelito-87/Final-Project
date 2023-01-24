@@ -77,6 +77,7 @@ onMounted(() => {
 </script>
 
 <style>
+/*
 .content h3 {
   font-size: 1.2rem;
 }
@@ -97,7 +98,7 @@ onMounted(() => {
   font-weight: bold;
   color: #c3bcbc;
   font-size: 1.2rem;
-}
+}*/
 </style>
 
 <!-- 

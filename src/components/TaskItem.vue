@@ -1,18 +1,36 @@
 <template>
     <div>
+        <p class="info-task">Title</p>
         <h3 class="task-title" :class="task.is_complete ? 'task-complete' : ''">{{ task.title }}</h3>
+        <p class="info-task">Number Task</p>
         <h3 class="task-title">{{ task.id }}</h3>
+        <p class="info-task">Task Description</p>
         <h5 class="task-description">{{ task.description }}</h5>
         <template v-if="showInputs">
             <form class="form-tasks" @submit.prevent="editTask">
                 <input class="input-title" type="text" v-model="title">
                 <input class="input-description-task" type="text" v-model="description">
-                <button class="button-update" type="submit">Update Task</button>
+                <button class="button-update" type="submit">Update</button>
             </form>
         </template>
-        <button class="buttons-change" @click="showEditTask">Edit</button>
-        <button class="buttons-change" @click="completeTask">{{ task.is_complete ? "UnDone" : "Done" }}</button>
-        <button class="button-delete" @click="deleteTask">Delete</button>
+        <div class="buttons-edit-container">
+            <button class="buttons-change" @click="showEditTask">Edit</button>
+            <button class="buttons-change-complete" @click="completeTask">{{
+                task.is_complete ? "UnDone" : "Done"
+            }}</button>
+            <button class="button-delete" @click="deleteTask">Delete</button>
+        </div>
+        <div class="img-buttons-container">
+            <img class="edit-img"
+                src="https://res.cloudinary.com/dn73thusg/image/upload/v1674133401/Final-Project/edit_image_ijkquj.jpg"
+                alt="edit_img">
+            <img class="done-img"
+                src="https://res.cloudinary.com/dn73thusg/image/upload/v1674553400/Final-Project/done_buttom_1_qaxvjg.png"
+                alt="done_button">
+            <img class="delete-img"
+                src="https://res.cloudinary.com/dn73thusg/image/upload/v1674553317/Final-Project/delete_button_izakyo.jpg"
+                alt="delete_button">
+        </div>
     </div>
 
 </template>
@@ -80,6 +98,7 @@ const deleteTask = () => {
 </script>
 
 <style>
+/*
 .task-title {
     padding: 0 100px;
     margin: 20px;
@@ -111,7 +130,7 @@ const deleteTask = () => {
     flex-direction: initial;
     justify-content: space-evenly;
     align-items: baseline;
-}
+}*/
 </style>
 
 <!--
